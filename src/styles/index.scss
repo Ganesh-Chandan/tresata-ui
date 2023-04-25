@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,900&display=swap');
+// Regular
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import "./color.scss";
 
 html, #root{
@@ -11,8 +13,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  font-size: 16px;
 }
 
 @import "./App.scss";
 @import "./AppHeader.scss";
 @import "./toggle.scss";
+@import "./searchBox.scss";
+@import "./Icon.scss";

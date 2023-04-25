@@ -1,5 +1,6 @@
 import Toggle from "../custom/Toggle";
 import SubHeader from "./SubHeader";
+import Icon from "../custom/Icon";
 
 const Header = () => {
   return (
@@ -17,12 +18,8 @@ const Header = () => {
           <div className="userName">Hello Alex!</div>
         </div>
         <div className="iconsDiv">
-          <div className="iconDiv">
-            <span className="homeLogo"></span>
-          </div>
-          <div className="iconDiv">
-            <span className="undoLogo"></span>
-          </div>
+          <Icon name="home" />
+          <Icon name="undo" />
         </div>
         <div className="actionAndUser">
           <div className="assistiveMode">
