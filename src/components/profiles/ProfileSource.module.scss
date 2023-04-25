@@ -1,0 +1,22 @@
+.star {
+  margin-left: 20px;
+  width: 14px;
+  height: 14px;
+  background: transparent url("../../image/star-not-filled.svg") 0% 0% no-repeat
+    padding-box;
+  &.selected {
+    background: transparent url("../../image/star-filled.svg") 0% 0% no-repeat
+      padding-box;
+  }
+}
+
+.checkbox {
+  width: 12px;
+  height: 12px;
+  background: transparent url("../../image/checkbox.svg") 0% 0% no-repeat
+    padding-box;
+  &.selected {
+    background: transparent url("../../image/checkbox-selected.svg") 0% 0%
+      no-repeat padding-box;
+  }
+}

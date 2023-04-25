@@ -1,8 +1,17 @@
-*{
-    .app{
-        width: 100%;
-        padding: 20px 40px;
-        box-sizing: border-box;
-        height: 100%;
+* {
+  .app {
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    height: 100%;
+    .profile-header {
+      font: normal normal bold 16px/19px Lato;
+      letter-spacing: 0px;
+      color: #231f20;
     }
+    .profile-section {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }

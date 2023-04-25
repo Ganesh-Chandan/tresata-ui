@@ -1,0 +1,50 @@
+.container {
+  flex: 1 0;
+  background: white;
+  // width: 1540px;
+  height: 599px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  row-gap: 3px;
+  column-gap: 4px;
+  .itemIndicators {
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background: white;
+    column-gap: 4px;
+    div {
+      width: 100%;
+    }
+    .itemPopulated {
+      background: #f3f6f9 0% 0% no-repeat padding-box;
+      padding-top: 22px;
+    }
+    .itemPercentPopulated {
+      background: #f3f6f9 0% 0% no-repeat padding-box;
+      padding-top: 22px;
+    }
+    .itemUnique {
+      background: #f3f6f9 0% 0% no-repeat padding-box;
+      padding-top: 22px;
+    }
+    .itemFormat {
+      background: #f3f6f9 0% 0% no-repeat padding-box;
+      padding-top: 22px;
+    }
+  }
+  .itemSimilarity {
+    padding-top: 22px;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+    background: #f3f6f9 0% 0% no-repeat padding-box;
+  }
+  .itemDetail {
+    padding-top: 22px;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    background: #f3f6f9 0% 0% no-repeat padding-box;
+  }
+}
