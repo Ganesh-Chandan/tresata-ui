@@ -1,17 +1,52 @@
 import Toggle from "../custom/Toggle";
+import SubHeader from "./SubHeader";
 
 const Header = () => {
   return (
-    <div className="app-header">
-      <div>
-        <img
-          src="../image/logo.png"
-          alt="Tresata Logo"
-          width="152"
-          height="25"
-        ></img>
+    <header>
+      <div className="app-header">
+        <div>
+          <div className="appLogo">
+            <img
+              src="../image/logo.png"
+              alt="Tresata Logo"
+              width="152"
+              height="25"
+            ></img>
+          </div>
+          <div className="userName">Hello Alex!</div>
+        </div>
+        <div className="iconsDiv">
+          <div className="iconDiv">
+            <span className="homeLogo"></span>
+          </div>
+          <div className="iconDiv">
+            <span className="undoLogo"></span>
+          </div>
+        </div>
+        <div className="actionAndUser">
+          <div className="assistiveMode">
+            <label>Assistive mode</label>
+            <Toggle />
+          </div>
+          <div className="communityInfo">
+            <label>Tresata Community</label>
+          </div>
+          <div className="notifcations">
+            <span className="notifactionIcon"></span>
+          </div>
+          <div className="userIcon">
+            <img
+              src="../image/profile.png"
+              alt="User Icon"
+              width="40"
+              height="40"
+            ></img>
+          </div>
+        </div>
       </div>
-    </div>
+      <SubHeader />
+    </header>
   );
 };
 

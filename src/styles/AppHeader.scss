@@ -1,5 +1,158 @@
 *{
+
     .app-header{
         width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-template-columns: calc(50% - 45px) 90px calc(50% - 45px);
+        >div{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .userName{
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #231F20;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            font: normal normal bold 20px/24px Lato;
+            letter-spacing: 0px;
+        }
+        .iconsDiv{
+            .iconDiv{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $smoke_white;
+                border-radius: 4px;
+                cursor: pointer;
+                &:first-child{
+                    margin-right: 10px;
+                }
+                &:hover{
+                    background-color: $smoke_white_hover;
+                }
+                .homeLogo {
+                    background: url("../image/home_logo.svg") 0% 0% no-repeat padding-box;
+                    display: block;
+                    width: 20px;
+                    height: 22px;
+                }
+
+                .undoLogo {
+                    background: url("../image/undo_logo.svg") 0% 0% no-repeat padding-box;
+                    display: block;
+                    width: 25px;
+                    height: 22px;
+                }
+            }
+        }
+        .actionAndUser{
+            justify-content: flex-end;
+            .assistiveMode{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                >label{
+                    margin-right: 10px;
+                    font: normal normal normal 14px/18px Lato;
+                    letter-spacing: -0.04px;
+                }
+            }
+            .communityInfo{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font: normal normal bold 14px/17px Lato;
+                letter-spacing: 0px;
+                color: $primary_color;
+                opacity: 1;
+                margin-left: 20px;
+            }
+            .notifcations{
+                height: 100%;
+                display: flex;
+                margin-left: 20px;
+                align-items: center;
+                .notifactionIcon{
+                    background: url("../image/notification.svg") 0% 0% no-repeat padding-box;
+                    display: block;
+                    width: 26px;
+                    height: 29px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        border: 2px solid $white;
+                        background-color: $red;
+                        border-radius: 50%;
+                        right: 0px;
+                        top: 2px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+            .userIcon{
+                width: 40px;
+                height: 40px;
+                margin-left: 20px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid $white;
+                    background-color: $green;
+                    border-radius: 50%;
+                    left: 30px;
+                    bottom: 2px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    .app-sub-header{
+        .reviewHeatMap{
+            display: grid;
+            height: 40px;
+            grid-template-columns: auto 166px;
+            margin-top: 30px;
+            .information{
+                display: grid;
+                >span{
+                    &:first-child{
+                        font: normal normal normal 14px/17px Lato;
+                        letter-spacing: 0px;
+                        color: $gray;
+                        opacity: 1;
+                    }
+                    &:last-child{
+                        font: normal normal bold 20px/24px Lato;
+                        letter-spacing: 0px;
+                        color: $balck;
+                        text-transform: capitalize;
+                        opacity: 1;
+                    }
+                }
+            }
+            .reviewHeatMapButton{
+                background-color: $primary_color;
+                color: $white;
+                font: normal normal bold 14px/17px Lato;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                opacity: 1;
+                border-radius: 4px;
+                border: 1px solid $primary_color;
+            }
+        }
     }
 }
