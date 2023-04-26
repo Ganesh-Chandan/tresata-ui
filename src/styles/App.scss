@@ -17,5 +17,48 @@
         margin-top: 20px;
       }
     }
+    .footer-hide {
+      height: 80px;
+    }
+    .app-footer {
+      .icon {
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        gap: 10px;
+        &.one {
+          background: transparent url("../image/footer-bar-one.svg") 0% 0%
+            no-repeat padding-box;
+        }
+        &.two {
+          background: transparent url("../image/footer-bar-two.svg") 0% 0%
+            no-repeat padding-box;
+        }
+        &.three {
+          background: transparent url("../image/footer-bar-three.svg") 0% 0%
+            no-repeat padding-box;
+          &.active {
+            background: transparent url("../image/footer-bar-three-active.svg")
+              0% 0% no-repeat padding-box;
+          }
+        }
+        &.four {
+          background: transparent url("../image/footer-bar-four.svg") 0% 0%
+            no-repeat padding-box;
+        }
+        &.five {
+          background: transparent url("../image/footer-bar-five.svg") 0% 0%
+            no-repeat padding-box;
+        }
+        &.six {
+          background: transparent url("../image/footer-bar-six.svg") 0% 0%
+            no-repeat padding-box;
+        }
+        &.seven {
+          background: transparent url("../image/footer-bar-seven.svg") 0% 0%
+            no-repeat padding-box;
+        }
+      }
+    }
   }
 }
