@@ -25,38 +25,21 @@ const Similarity = () => {
     },
   ]);
 
-  useEffect(() => {
-    const isAllSelected = !tags.some(({ isChecked }) => !isChecked);
-    setSelectAll(isAllSelected);
-  }, [tags]);
-
   const onChangeHandler = (id: number, isChecked: boolean) => {
-    setSelectedTags((state) => {
-      if (selectedTags.includes(id)) {
-        state.splice(selectedTags.indexOf(id), 1);
-      } else {
-        state.push(id);
-      }
-      return [...state];
-    });
-    setTags((state) =>
-      state.map((data) => {
-        if (data.id === id) {
-          data.isChecked = isChecked;
-        }
-        return data;
-      })
-    );
+    if (selectedTags.includes(id)) {
+      selectedTags.splice(selectedTags.indexOf(id), 1);
+    } else {
+      selectedTags.push(id);
+    }
+    setSelectedTags([...selectedTags]);
   };
 
   const onSelectAllHandler = (event: any, isChecked: boolean) => {
-    setSelectAll(isChecked);
-    setTags((state) =>
-      state.map((data) => {
-        data.isChecked = isChecked;
-        return data;
-      })
-    );
+    if (isChecked) {
+      setSelectedTags(() => tags.map(({ id }) => id));
+    } else {
+      setSelectedTags([]);
+    }
   };
 
   return (
@@ -66,14 +49,14 @@ const Similarity = () => {
           label="Select All"
           className={styles.selectAll}
           onChange={onSelectAllHandler}
-          isChecked={selectAll}
+          isChecked={tags.length === selectedTags.length}
         />
         {tags.map((tag) => (
           <Tag
             tag={tag}
             onChange={onChangeHandler}
             key={tag.id}
-            isChecked={tag.isChecked}
+            isChecked={selectedTags.includes(tag.id)}
           />
         ))}
       </div>
