@@ -35,7 +35,16 @@ const ProfileSource: React.FC<ProfileSourceProp> = ({
         onChange={() => setSelectedCheckbox(!selectedCheckbox)}
       />
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
-      <div className={styles.detail} />
+      <div className={styles.detail}>
+        <div className={styles.header}>{label}</div>
+        <div className={styles.match}>
+          {`${record} Records, ${fields} Fields`}
+        </div>
+        <div className={styles.indicator}>
+          {secondaryLabel}
+          <div className={styles.subIndicator}>{secondaryLabelQty}</div>
+        </div>
+      </div>
       <div className={styles.expand} />
     </div>
   );
