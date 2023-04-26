@@ -22,11 +22,13 @@ const ProfileSource: React.FC<ProfileSourceProp> = ({
   secondaryLabelQty,
 }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <div
         className={`${styles.checkbox} ${selected ? styles.selected : ""}`}
       />
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
+      <div className={styles.detail} />
+      <div className={styles.expand} />
     </div>
   );
 };

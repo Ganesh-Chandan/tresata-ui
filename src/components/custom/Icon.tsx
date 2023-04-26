@@ -1,6 +1,6 @@
 interface IIcon {
   name: string;
-  className: string;
+  className?: string;
 }
 
 const Icon = ({ name, className = "" }: IIcon) => (

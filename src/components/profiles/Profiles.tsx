@@ -9,6 +9,7 @@ const profileAttributes = [
     starred: true,
     showSecondaryLabel: true,
     populated: "60%",
+    populatedIndicator: "positive",
     unique: "120K",
   },
   {
@@ -17,6 +18,7 @@ const profileAttributes = [
     starred: false,
     showSecondaryLabel: false,
     populated: "100%",
+    populatedIndicator: "positive",
     unique: "120K",
   },
   {
@@ -26,6 +28,7 @@ const profileAttributes = [
     starred: false,
     showSecondaryLabel: false,
     populated: "60%",
+    populatedIndicator: "positive",
     unique: "120K",
   },
   {
@@ -34,6 +37,7 @@ const profileAttributes = [
     starred: true,
     showSecondaryLabel: false,
     populated: "34%",
+    populatedIndicator: "negative",
     unique: "100",
   },
   {
@@ -42,6 +46,7 @@ const profileAttributes = [
     starred: false,
     showSecondaryLabel: false,
     populated: "34%",
+    populatedIndicator: "negative",
     unique: "100",
   },
 ];
