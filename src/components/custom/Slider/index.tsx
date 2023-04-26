@@ -35,7 +35,6 @@ const Slider = ({ value, onChange = () => {}, className = "" }: ISlider) => {
     if (clientX - left < 0) {
       value = 0;
     } else if (clientX > left + width) {
-      debugger;
       value = 100;
     } else {
       value = Math.round(((clientX - left) * 100) / width);
