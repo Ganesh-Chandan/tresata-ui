@@ -1,5 +1,5 @@
 import Checkbox from "../../custom/Checkbox";
-import styles from "./deatailsTile.module.scss";
+import styles from "./DetailsTile.module.scss";
 
 interface IDetailsTile {
   title: string;
@@ -21,8 +21,8 @@ const DetailsTile = ({
         <div className={styles.detailsTileInfo}></div>
       </div>
       <div className={`${styles.detailsItems} ${styles[theme]}`}>
-        {items.map(({ name, value }) => (
-          <div className={styles.detailsItem}>
+        {items.map(({ name, value }, index) => (
+          <div className={styles.detailsItem} key={index}>
             <div className={styles.detailsName}>
               {isCheckboxRequired ? (
                 <Checkbox

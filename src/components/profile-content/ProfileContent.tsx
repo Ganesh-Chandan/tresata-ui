@@ -1,7 +1,7 @@
 import styles from "./ProfileContent.module.scss";
 import Similarity from "./similarity";
 import Indicators from "./Indicators";
-import Details from "./details";
+import { Details } from "./details";
 
 const ProfileContent = () => {
   return (
