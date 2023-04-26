@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../ProfileContent.module.scss";
 import Tag from "./Tags";
 import Information from "./Information";
+import Slider from "../../custom/Slider";
 import AddTags from "./AddTags";
 import Checkbox from "../../custom/Checkbox";
 
@@ -44,6 +45,8 @@ const Similarity = () => {
 
   return (
     <>
+      <div className={styles.similarityTitle}>Similarity</div>
+      <Slider value={20} className={styles.similaritySlider} />
       <div className={styles.similarityTiles}>
         <Checkbox
           label="Select All"

@@ -43,6 +43,16 @@
     grid-row: 1 / span 3;
     background: #f3f6f9 0% 0% no-repeat padding-box;
     position: relative;
+    .similaritySlider{
+      padding-bottom: 40px;
+    }
+    .similarityTitle{
+      text-align: left;
+      font: normal normal bold 1.125rem/22px Lato;
+      letter-spacing: 0px;
+      color: $gray;
+      margin-bottom: 5px;
+    }
     .infomation{
       display: flex;
       flex-flow: column;
