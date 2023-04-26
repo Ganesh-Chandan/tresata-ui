@@ -1,22 +1,42 @@
-.star {
-  margin-left: 20px;
-  width: 14px;
-  height: 14px;
-  background: transparent url("../../image/star-not-filled.svg") 0% 0% no-repeat
-    padding-box;
-  &.selected {
-    background: transparent url("../../image/star-filled.svg") 0% 0% no-repeat
-      padding-box;
-  }
-}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 14px 12px 14px 8px;
 
-.checkbox {
-  width: 12px;
-  height: 12px;
-  background: transparent url("../../image/checkbox.svg") 0% 0% no-repeat
-    padding-box;
-  &.selected {
-    background: transparent url("../../image/checkbox-selected.svg") 0% 0%
+  .star {
+    margin-left: 20px;
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    background: transparent url("../../image/star-not-filled.svg") 0% 0%
+      no-repeat padding-box;
+    &.selected {
+      background: transparent url("../../image/star-filled.svg") 0% 0% no-repeat
+        padding-box;
+    }
+  }
+
+  .checkbox {
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    background: transparent url("../../image/checkbox.svg") 0% 0% no-repeat
+      padding-box;
+    &.selected {
+      background: transparent url("../../image/checkbox-selected.svg") 0% 0%
+        no-repeat padding-box;
+    }
+  }
+  .detail {
+    flex: 1 0;
+  }
+  .expand {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    background: transparent url("../../image/ic-expand-more.svg") 0% 0%
       no-repeat padding-box;
   }
 }

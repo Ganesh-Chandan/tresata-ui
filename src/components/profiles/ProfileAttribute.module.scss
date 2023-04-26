@@ -22,7 +22,6 @@
   .labelContainer {
     margin-left: 10px;
     flex: 1 0;
-
     .label {
       font: normal normal normal 14px/17px Lato;
       letter-spacing: 0px;
@@ -45,16 +44,34 @@
   .populated {
     display: flex;
     flex-direction: column;
+    // justify-content: space-around;
     flex: 0 0 50px;
     height: 40px;
     .secondaryLabel {
       font: normal normal normal 10px/12px Lato;
       letter-spacing: 0px;
       color: #949494;
+      min-height: 12px;
     }
     .populatedMetric,
     .uniqueMetric {
       flex: 1;
+      &.indicator {
+        background: #e8e8e8 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        width: min-content;
+        margin-top: 10px;
+        font: normal normal normal 10px/18px Lato;
+        letter-spacing: -0.03px;
+        color: #231f20;
+        padding: 0 7px;
+      }
+      &.green {
+        background: #b1e579 0% 0% no-repeat padding-box;
+      }
+      &.red {
+        background: #f9849d 0% 0% no-repeat padding-box;
+      }
     }
   }
 }
