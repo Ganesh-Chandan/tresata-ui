@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <div>
+      <div className="profile-detail">
         <header className="profile-header">Profile Sources (02)</header>
         <div className="profile-section">
           <Profiles />

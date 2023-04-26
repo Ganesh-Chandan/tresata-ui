@@ -1,9 +1,11 @@
 import ProfileAttribute from "./ProfileAttribute";
 import ProfileSource from "./ProfileSource";
 import styles from "./Profiles.module.scss";
+import { useState } from "react";
 
 const profileAttributes = [
   {
+    id: "customerId",
     label: "Customer ID",
     tag: "No tag",
     starred: true,
@@ -13,6 +15,7 @@ const profileAttributes = [
     unique: "120K",
   },
   {
+    id: "customerName",
     label: "Customer Name",
     tag: "name",
     starred: false,
@@ -22,9 +25,9 @@ const profileAttributes = [
     unique: "120K",
   },
   {
+    id: "phone",
     label: "Phone",
     tag: "phone",
-    selected: true,
     starred: false,
     showSecondaryLabel: false,
     populated: "60%",
@@ -32,6 +35,7 @@ const profileAttributes = [
     unique: "120K",
   },
   {
+    id: "email",
     label: "Email",
     tag: "name",
     starred: true,
@@ -41,6 +45,7 @@ const profileAttributes = [
     unique: "100",
   },
   {
+    id: "dob",
     label: "Date of Birth",
     tag: "name",
     starred: false,
@@ -75,13 +80,21 @@ const profileSources = [
 ];
 
 const Profiles = () => {
+  const [selectedAttributeId, setSelectedAttributeId] = useState(
+    profileAttributes[0].id
+  );
   return (
     <div className={styles.container}>
       {profileSources.map((profileSource) => (
         <ProfileSource key={profileSource.label} {...profileSource} />
       ))}
       {profileAttributes.map((profileAttribute) => (
-        <ProfileAttribute key={profileAttribute.label} {...profileAttribute} />
+        <ProfileAttribute
+          key={profileAttribute.id}
+          {...profileAttribute}
+          selected={selectedAttributeId === profileAttribute.id}
+          selectAttribute={(id) => setSelectedAttributeId(id)}
+        />
       ))}
     </div>
   );
