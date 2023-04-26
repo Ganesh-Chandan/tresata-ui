@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../ProfileContent.module.scss";
 import Tag from "./Tags";
 import Information from "./Information";
@@ -7,9 +7,8 @@ import AddTags from "./AddTags";
 import Checkbox from "../../custom/Checkbox";
 
 const Similarity = () => {
-  const [selectAll, setSelectAll] = useState(false);
   const [selectedTags, setSelectedTags] = useState<number[]>([]);
-  const [tags, setTags] = useState([
+  const [tags] = useState([
     {
       id: 123,
       name: "Orig Phone",

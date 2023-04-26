@@ -1,6 +1,6 @@
-import Toggle from "../custom/Toggle";
+import Toggle from "../custom/Toggle/Toggle";
 import SubHeader from "./SubHeader";
-import Icon from "../custom/Icon";
+import Icon from "../custom/Icons";
 
 const Header = () => {
   return (

@@ -1,5 +1,6 @@
-*{
+@import "../../../styles/color.scss";
 
+*{
     @mixin iconCommon {
         display: block;
         width: 100%;
@@ -26,17 +27,17 @@
     
         .home {
             @include iconCommon;
-            background: url("../image/home_logo.svg") 50% 50% no-repeat padding-box;
+            background: url("../../../image/home_logo.svg") 50% 50% no-repeat padding-box;
         }
     
         .undo {
             @include iconCommon;
-            background: url("../image/undo_logo.svg") 50% 50% no-repeat padding-box;
+            background: url("../../../image/undo_logo.svg") 50% 50% no-repeat padding-box;
         }
         
         .filter{
             @include iconCommon;
-            background: url("../image/filter.svg") 50% 50% no-repeat padding-box;
+            background: url("../../../image/filter.svg") 50% 50% no-repeat padding-box;
         }
     }
 }

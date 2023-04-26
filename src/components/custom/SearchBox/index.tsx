@@ -1,3 +1,5 @@
+import styles from "./SearchBox.module.scss";
+
 interface ISearchBox {
   className?: string;
   onSearch?: () => void;
@@ -10,10 +12,10 @@ const SearchBox = ({
   placeHolder,
 }: ISearchBox) => {
   return (
-    <div className={`searchBox ${className}`}>
-      <span className="serachIcon"></span>
+    <div className={`${styles.searchBox} ${className}`}>
+      <span className={styles.serachIcon}></span>
       <input
-        className="serachInput"
+        className={styles.serachInput}
         onChange={onSearch}
         placeholder={placeHolder}
       ></input>

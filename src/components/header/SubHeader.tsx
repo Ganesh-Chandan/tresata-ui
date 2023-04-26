@@ -1,5 +1,5 @@
 import SearchBox from "../custom/SearchBox";
-import Icon from "../custom/Icon";
+import Icon from "../custom/Icons";
 import Checkbox from "../custom/Checkbox";
 import { useState } from "react";
 

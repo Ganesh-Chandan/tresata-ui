@@ -29,7 +29,7 @@ const Slider = ({ value, onChange = () => {}, className = "" }: ISlider) => {
     if (!sliderRef.current) {
       return;
     }
-    const { width, left, right } = sliderRef.current.getBoundingClientRect();
+    const { width, left } = sliderRef.current.getBoundingClientRect();
     const { clientX } = event;
     let value = 0;
     if (clientX - left < 0) {
