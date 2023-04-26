@@ -34,6 +34,9 @@
                     background: $primary_color 0% 0% no-repeat padding-box;
                 }
                 .sliderIcon{
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
                     position: absolute;
                     display: flex;
                     align-items: center;
@@ -48,6 +51,7 @@
                     border-radius: 50%;
                     top: 0px;
                     transition: all .2s;
+                    cursor: pointer;
                 }
             }
     }
