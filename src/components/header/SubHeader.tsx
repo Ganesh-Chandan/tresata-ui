@@ -1,8 +1,13 @@
 import SearchBox from "../custom/SearchBox";
 import Icon from "../custom/Icon";
 import Checkbox from "../custom/Checkbox";
+import { useState } from "react";
 
 const SubHeader = () => {
+  const [showPinned, setShowPinned] = useState(false);
+
+  const changeShowPinned = (event: any, value: boolean) => setShowPinned(value);
+
   return (
     <div className="appSubHeader">
       <div className="reviewHeatMap">
@@ -19,7 +24,12 @@ const SubHeader = () => {
       <div className="serachAndFilter">
         <SearchBox placeHolder="Search from Directory, Source, Tag or Add a Path" />
         <Icon name="filter" className="filters" />
-        <Checkbox className="showPineed" label="Show Pinned" />
+        <Checkbox
+          className="showPineed"
+          label="Show Pinned"
+          isChecked={showPinned}
+          onChange={changeShowPinned}
+        />
       </div>
     </div>
   );

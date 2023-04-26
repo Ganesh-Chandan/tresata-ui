@@ -1,26 +1,30 @@
 import styles from "./checkbox.module.scss";
 
 interface ICheckbox {
-  className: string;
+  className?: string;
   label: string;
-  onChange: () => void;
+  isChecked?: boolean;
+  onChange?: Function;
 }
 
 const Checkbox = ({
   className = "",
   label,
+  isChecked = false,
   onChange = () => {},
 }: ICheckbox) => {
+  const onChangeHandler = (event: any) => onChange(event, !isChecked);
+
   return (
     <div className={`${styles.checkbox} ${className}`}>
       <input
         type="checkbox"
         id="checkboxInput"
         className={styles.checkboxInput}
+        checked={isChecked}
+        onChange={onChangeHandler}
       />
-      <label htmlFor="checkboxInput" className={styles.checkboxLabel}>
-        {label}
-      </label>
+      <label className={styles.checkboxLabel}>{label}</label>
     </div>
   );
 };
