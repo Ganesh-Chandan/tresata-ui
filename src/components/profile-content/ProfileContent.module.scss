@@ -4,7 +4,7 @@
   flex: 1 0;
   background: white;
   // width: 1540px;
-  height: 599px;
+  height: 580px;
   display: grid;
   grid-template-columns: 2fr 2fr 1.5fr;
   grid-template-rows: 1fr 2fr 2fr;
@@ -17,7 +17,8 @@
     grid-row: 1;
     background: white;
     column-gap: 4px;
-    div {
+    > div {
+      padding: 22px;
       width: 100%;
     }
     .itemPopulated {
@@ -39,108 +40,117 @@
     grid-row: 1 / span 3;
     background: #f3f6f9 0% 0% no-repeat padding-box;
     position: relative;
-    .similaritySlider{
+    .similaritySlider {
       padding-bottom: 40px;
     }
-    .similarityTitle{
+    .similarityTitle {
       text-align: left;
       font: normal normal bold 1.125rem/22px Lato;
       letter-spacing: 0px;
       color: $gray;
       margin-bottom: 5px;
     }
-    .infomation{
+    .infomation {
       display: flex;
       flex-flow: column;
       align-items: center;
       position: absolute;
-      bottom: 74px;     
+      bottom: 74px;
       width: calc(100% - 44px);
-      .infomationIcon{
-          background: url("../../image/noun-bulb-3408498.svg") 0% 0% no-repeat padding-box;
-          width: 24px;
-          height: 24px;
-          display: block;
-          opacity: .4;
+      .infomationIcon {
+        background: url("../../image/noun-bulb-3408498.svg") 0% 0% no-repeat
+          padding-box;
+        width: 24px;
+        height: 24px;
+        display: block;
+        opacity: 0.4;
       }
-      .informationText{
+      .informationText {
         margin-top: 12px;
         text-align: center;
-        font-size: .75rem;
+        font-size: 0.75rem;
         font-weight: normal;
         letter-spacing: 0px;
         color: $smoke_gray;
       }
     }
-    .selectAll{
-      font-size: .75rem;
+    .selectAll {
+      font-size: 0.75rem;
       font-weight: bold;
       letter-spacing: 0.11px;
       color: $balck;
     }
     .similarityTiles {
-        width: 300px;
-        display: grid;
-        grid-gap: 8px;
-        height: calc(100% - 170px);
-        grid-auto-rows: max-content;
-        overflow: auto;
-        .similarityTile {
-          width: 100%;
-          height: 80px;
+      width: 300px;
+      display: grid;
+      grid-gap: 8px;
+      height: calc(100% - 176px);
+      grid-auto-rows: max-content;
+      overflow: auto;
+      .similarityTile {
+        width: 100%;
+        height: 80px;
+        background: $white;
+        padding: 10px 12px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        .addTagButton {
+          border: none;
           background: $white;
-          padding: 10px 12px;
+          font-size: 0.625rem;
+          font-weight: bold;
+          letter-spacing: 0.1px;
+          color: $primary_color;
+          text-transform: uppercase;
+          height: 12px;
+          width: 47px;
+          padding: 0;
+          cursor: pointer;
+          text-align: right;
+          float: right;
+        }
+        .tileItemName {
+          font-size: 0.75rem;
+          font-weight: bold;
+          letter-spacing: 0.11px;
+          color: $primary_color;
+          height: 15px;
+          clear: both;
+        }
+        .tileInfo {
+          font-size: 0.75rem;
+          font-weight: normal;
+          letter-spacing: 0.11px;
+          color: #949494;
+          margin-top: 4px;
+          padding-left: 20px;
           box-sizing: border-box;
-          border-radius: 4px;    
-          .addTagButton {
-            border: none;
-            background: $white;
-            font-size: .625rem;
-            font-weight: bold;
-            letter-spacing: 0.1px;
-            color: $primary_color;
-            text-transform: uppercase;
-            height: 12px;
-            width: 47px;
-            padding: 0;
-            cursor: pointer;
-            text-align: right;
-            float: right;
-          }
-          .tileItemName{
-            font-size: .75rem;
-            font-weight: bold;
-            letter-spacing: 0.11px;
-            color: $primary_color;
-            height: 15px;
-            clear: both;
-          }
-          .tileInfo{
-            font-size: .75rem;
-            font-weight: normal;
-            letter-spacing: 0.11px;
-            color: #949494;
-            margin-top: 4px;
-            padding-left: 20px;
-            box-sizing: border-box;
-          }
-          .percentage{
-            font-size: .75rem;
-            font-weight: bold;
-            text-align: right;
-            letter-spacing: 0.11px;
-            color: #231F20;
-          }
+        }
+        .percentage {
+          font-size: 0.75rem;
+          font-weight: bold;
+          text-align: right;
+          letter-spacing: 0.11px;
+          color: #231f20;
         }
       }
+    }
   }
   .itemDetail {
-    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22px 22px 12px 22px;
     grid-column: 1 / span 2;
     grid-row: 2 / span 2;
     background: #f3f6f9 0% 0% no-repeat padding-box;
+    .tiles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
-  .addTags{
+  .addTags {
     height: 51px;
     background: $primary_color 0% 0% no-repeat padding-box;
     border-radius: 4px;
@@ -150,17 +160,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .selecetedTags{
+    .selecetedTags {
       font-weight: normal;
-      font-size: .875rem;
+      font-size: 0.875rem;
       letter-spacing: 0px;
       color: $white;
       text-transform: capitalize;
       opacity: 1;
     }
-    .selecetedTagButton{
+    .selecetedTagButton {
       font-weight: bold;
-      font-size: .875rem;
+      font-size: 0.875rem;
       letter-spacing: 0px;
       color: $white;
       text-transform: capitalize;
@@ -169,7 +179,7 @@
       border: none;
       outline: none;
       cursor: pointer;
-      label{
+      label {
         background: $tile_color 0% 0% no-repeat padding-box;
         border: 1px dashed $primary_color;
         border-radius: 4px;
@@ -178,6 +188,5 @@
         height: 16px;
       }
     }
-
   }
 }

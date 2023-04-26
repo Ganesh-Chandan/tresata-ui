@@ -2,6 +2,8 @@ import ProfileAttribute from "./ProfileAttribute";
 import ProfileSource from "./ProfileSource";
 import styles from "./Profiles.module.scss";
 import { useState } from "react";
+import SearchBox from "../custom/SearchBox";
+import Icon from "../custom/Icons";
 
 const profileAttributes = [
   {
@@ -88,6 +90,11 @@ const Profiles = () => {
       {profileSources.map((profileSource) => (
         <ProfileSource key={profileSource.label} {...profileSource} />
       ))}
+      <div className={styles.searchContainer}>
+        <SearchBox placeHolder={"Search Field Name"} isProfileSearch={true} />
+        <Icon name="filter" className="filters" />
+      </div>
+
       {profileAttributes.map((profileAttribute) => (
         <ProfileAttribute
           key={profileAttribute.id}

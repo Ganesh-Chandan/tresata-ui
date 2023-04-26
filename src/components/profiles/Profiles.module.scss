@@ -1,4 +1,10 @@
 .container {
   flex: 0 0 292px;
   height: 500px;
+  .searchContainer {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 12px;
+    justify-content: flex-start;
+  }
 }
