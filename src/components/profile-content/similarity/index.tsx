@@ -60,7 +60,7 @@ const Similarity = () => {
           />
         ))}
       </div>
-      <AddTags selectedTags={selectedTags.length} />
+      <AddTags selectedTagsCount={selectedTags.length} />
       <Information />
     </>
   );

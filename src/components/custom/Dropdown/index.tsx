@@ -39,6 +39,10 @@ const Dropdown = ({
     setIsOpen(!isOpen);
   };
 
+  const closeDropdwon = (event: any) => {
+    setIsOpen(false);
+  };
+
   return (
     <div className={`${styles.dropdown} ${className}`}>
       <div className={`${styles.dropdownPlaceholder}`} onClick={openDropdown}>
@@ -73,8 +77,12 @@ const Dropdown = ({
               ))}
             </ul>
             <div className={styles.actions}>
-              <button className={styles.actionButton}>CANCEL</button>
-              <button className={styles.actionButton}>APPLY</button>
+              <button className={styles.actionButton} onClick={closeDropdwon}>
+                CANCEL
+              </button>
+              <button className={styles.actionButton} onClick={closeDropdwon}>
+                APPLY
+              </button>
             </div>
           </>
         )}
