@@ -160,6 +160,15 @@
       border: none;
       outline: none;
       cursor: pointer;
+      label{
+        background: $tile_color 0% 0% no-repeat padding-box;
+        border: 1px dashed $primary_color;
+        border-radius: 4px;
+        opacity: 1;
+        padding: 0 8px;
+        height: 16px;
+      }
     }
+
   }
 }
