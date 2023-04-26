@@ -1,5 +1,6 @@
 import SearchBox from "../custom/SearchBox";
 import Icon from "../custom/Icon";
+import Checkbox from "../custom/Checkbox";
 
 const SubHeader = () => {
   return (
@@ -18,12 +19,7 @@ const SubHeader = () => {
       <div className="serachAndFilter">
         <SearchBox placeHolder="Search from Directory, Source, Tag or Add a Path" />
         <Icon name="filter" className="filters" />
-        <div className="showPineed">
-          <input type="checkbox" id="showpinnedInput" />
-          <label htmlFor="showpinnedInput" className="showpinnedLabel">
-            Show Pinned
-          </label>
-        </div>
+        <Checkbox className="showPineed" label="Show Pinned" />
       </div>
     </div>
   );

@@ -176,23 +176,7 @@
                 }
             }
             .showPineed{
-                display: flex;
-                align-items: center;
                 margin-left: 16px;
-                #showpinnedInput{
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                }
-                .showpinnedLabel {
-                    font-size: .875em;
-                    letter-spacing: 0.13px;
-                    color: $balck;
-                    opacity: 1;
-                    margin-left: 8px;
-                    cursor: pointer;
-                }
             }
         }
     }

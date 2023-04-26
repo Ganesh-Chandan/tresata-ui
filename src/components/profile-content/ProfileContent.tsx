@@ -1,4 +1,5 @@
 import styles from "./ProfileContent.module.scss";
+import Similarity from "./similarity";
 
 const ProfileContent = () => {
   return (
@@ -9,7 +10,9 @@ const ProfileContent = () => {
         <div className={styles.itemUnique}></div>
         <div className={styles.itemFormat}></div>
       </div>
-      <div className={styles.itemSimilarity}></div>
+      <div className={styles.itemSimilarity}>
+        <Similarity />
+      </div>
       <div className={styles.itemDetail}></div>
     </div>
   );
