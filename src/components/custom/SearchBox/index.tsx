@@ -1,18 +1,22 @@
 import styles from "./SearchBox.module.scss";
 
 interface ISearchBox {
-  className?: string;
   onSearch?: () => void;
   placeHolder: string;
+  isProfileSearch?: boolean;
 }
 
 const SearchBox = ({
-  className = "",
   onSearch = () => {},
   placeHolder,
+  isProfileSearch = false,
 }: ISearchBox) => {
   return (
-    <div className={`${styles.searchBox} ${className}`}>
+    <div
+      className={`${styles.searchBox} ${
+        isProfileSearch ? styles.profileSearch : ""
+      }`}
+    >
       <span className={styles.serachIcon}></span>
       <input
         className={styles.serachInput}

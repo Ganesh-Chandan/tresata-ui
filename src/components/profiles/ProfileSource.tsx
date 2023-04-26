@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import Checkbox from "../custom/Checkbox";
 import styles from "./ProfileSource.module.scss";
 
 interface ProfileSourceProp {
@@ -21,10 +23,16 @@ const ProfileSource: React.FC<ProfileSourceProp> = ({
   secondaryLabel,
   secondaryLabelQty,
 }) => {
+  const [selectedCheckbox, setSelectedCheckbox] = useState(selected);
+  useEffect(() => {
+    setSelectedCheckbox(selected);
+  }, [selected]);
   return (
     <div className={styles.container}>
-      <div
-        className={`${styles.checkbox} ${selected ? styles.selected : ""}`}
+      <Checkbox
+        isChecked={selectedCheckbox}
+        label=""
+        onChange={() => setSelectedCheckbox(!selectedCheckbox)}
       />
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
       <div className={styles.detail} />
