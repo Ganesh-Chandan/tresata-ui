@@ -1,6 +1,7 @@
 import styles from "./ProfileAttribute.module.scss";
 
 interface ProfileAttributeProp {
+  id: string;
   label: string;
   tag: string;
   selected?: boolean;
@@ -9,9 +10,11 @@ interface ProfileAttributeProp {
   unique: string;
   showSecondaryLabel?: boolean;
   populatedIndicator: string;
+  selectAttribute: (id: string) => void;
 }
 
 const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
+  id,
   label,
   selected = false,
   starred,
@@ -20,9 +23,13 @@ const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
   unique,
   showSecondaryLabel = false,
   populatedIndicator,
+  selectAttribute,
 }) => {
   return (
-    <div className={`${styles.container} ${selected ? styles.selected : ""}`}>
+    <div
+      className={`${styles.container} ${selected ? styles.selected : ""}`}
+      onClick={() => selectAttribute(id)}
+    >
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
       <div className={styles.labelContainer}>
         <div className={styles.label}>{label}</div>
