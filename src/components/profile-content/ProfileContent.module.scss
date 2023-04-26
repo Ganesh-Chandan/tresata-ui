@@ -7,6 +7,9 @@
   height: 580px;
   display: grid;
   grid-template-columns: 2fr 2fr 1.5fr;
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr 0;
+  }
   grid-template-rows: 1fr 2fr 2fr;
   row-gap: 3px;
   column-gap: 4px;
@@ -35,6 +38,9 @@
     }
   }
   .itemSimilarity {
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
     padding: 22px;
     grid-column: 3 / span 1;
     grid-row: 1 / span 3;
