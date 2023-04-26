@@ -1,0 +1,85 @@
+.detailsTile{
+    .detailsTileTitle{
+        font: normal normal bold 1.125rem/22px Lato;
+        letter-spacing: 0px;
+        color: #66676B;
+        display: flex;
+        align-items: center;
+        .detailsTileInfo{
+            width: 16px;
+            height: 16px;
+            background: transparent url('../../../image/info.svg') 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .blue{
+        .detailsItem {
+            border: 1px solid #034EA2;
+        }
+        .detailsValue{
+            background: rgba(3, 78, 162, .1) 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .purple{
+        .detailsItem {
+            border: 1px solid #A591EE;
+        }
+        
+        .detailsValue {
+            background: rgba(125, 3, 162, .1) 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .green{
+        .detailsItem {
+            border: 1px solid #098E32;
+        }
+        
+        .detailsValue {
+            background: rgba(9, 142, 50, .1) 0% 0% no-repeat padding-box;
+        }
+    }
+
+    .detailsItems{
+        display: grid;
+        grid-gap: 8px;
+        margin-top: 20px;
+        .detailsItem{
+            width: 260px;
+            height: 26px;
+           
+            border-radius: 4px;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 2px 0 6px;
+            justify-content: space-between;
+            background: #F3F6F9 0% 0% no-repeat padding-box;
+            .detailsName{
+                font: normal normal normal 10px/18px Lato;
+                letter-spacing: -0.03px;
+                color: #231F20;
+                opacity: 1;
+                label{
+                    font: normal normal normal 10px/18px Lato;
+                    letter-spacing: -0.03px;
+                    color: #231F20;
+                    opacity: 1;
+                }
+            }
+            .detailsValue{
+                width: 43px;
+                height: 22px;
+                border-radius: 4px;
+                font: normal normal bold 10px/18px Lato;
+                letter-spacing: -0.03px;
+                color: #231F20;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
