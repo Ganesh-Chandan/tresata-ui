@@ -10,6 +10,26 @@
         font: normal normal bold 16px/19px Lato;
         letter-spacing: 0px;
         color: #231f20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .notes{
+          display: grid;
+          align-items: center;
+          grid-template-columns: auto auto;
+          grid-gap: 4px;
+          font-size: 0.875rem;
+          font-weight: bold;
+          letter-spacing: 0.13px;
+          color: $primary_color;
+          opacity: 1;
+          .notesIcon{
+            width: 22px;
+            height: 22px;
+            background: transparent url('../image/notebook.svg') 0% 0% no-repeat padding-box;
+            opacity: 1;
+          }
+        }
       }
       .profile-section {
         display: flex;
@@ -60,5 +80,6 @@
         }
       }
     }
+
   }
 }

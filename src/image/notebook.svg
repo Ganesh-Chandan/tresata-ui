@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="notebook" transform="translate(0.34 0.34)">
+    <rect id="Rectangle_144548" data-name="Rectangle 144548" width="5" height="1" transform="translate(12.66 6.16)" fill="#034ea2"/>
+    <rect id="Rectangle_144549" data-name="Rectangle 144549" width="5" height="1" transform="translate(12.66 10.16)" fill="#034ea2"/>
+    <rect id="Rectangle_144550" data-name="Rectangle 144550" width="5" height="1" transform="translate(12.66 14.16)" fill="#034ea2"/>
+    <path id="Path_21071" data-name="Path 21071" d="M19.322,5H3.332A1.334,1.334,0,0,0,2,6.332V18.325a1.334,1.334,0,0,0,1.332,1.332h15.99a1.334,1.334,0,0,0,1.332-1.332V6.332A1.334,1.334,0,0,0,19.322,5ZM3.332,6.332h7.329V18.325H3.332Zm8.661,11.992V6.332h7.329V18.325Z" transform="translate(-0.668 -1.669)" fill="#034ea2"/>
+    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" width="22" height="22" transform="translate(-0.34 -0.34)" fill="none"/>
+  </g>
+</svg>

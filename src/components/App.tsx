@@ -8,7 +8,13 @@ const App = () => {
     <div className="app" role="app">
       <Header />
       <div className="profile-detail">
-        <header className="profile-header">Profile Sources (02)</header>
+        <header className="profile-header">
+          Profile Sources (02)
+          <div className="notes">
+            <div className="notesIcon"></div>
+            Notes
+          </div>
+        </header>
         <div className="profile-section">
           <Profiles />
           <ProfileContent />
