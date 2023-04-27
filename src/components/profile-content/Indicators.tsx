@@ -12,7 +12,7 @@ const Indicators = () => (
     </div>
     <div className={styles.itemPercentPopulated}>
       <Widget
-        title="#Populated"
+        title="%Populated"
         value="58.33%"
         description="41.67 Null values Reported"
       ></Widget>
