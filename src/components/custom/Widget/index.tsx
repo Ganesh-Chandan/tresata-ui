@@ -1,4 +1,4 @@
-import styles from "./widget.module.scss";
+import styles from "./Widget.module.scss";
 
 interface IWidget {
   title: string;
