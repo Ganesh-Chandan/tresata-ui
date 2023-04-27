@@ -1,4 +1,4 @@
-import styles from "./checkbox.module.scss";
+import styles from "./Checkbox.module.scss";
 
 interface ICheckbox {
   className?: string;
@@ -11,9 +11,9 @@ const Checkbox = ({
   className = "",
   label,
   isChecked = false,
-  onChange = () => {},
+  onChange,
 }: ICheckbox) => {
-  const onChangeHandler = (event: any) => onChange(event, !isChecked);
+  const onChangeHandler = (event: any) => onChange?.(event, !isChecked);
 
   return (
     <div className={`${styles.checkbox} ${className}`}>

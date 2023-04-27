@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import styles from "./dropdown.module.scss";
+import styles from "./Dropdown.module.scss";
 import Checkbox from "../Checkbox";
 
 interface IDropdown {
@@ -16,8 +16,8 @@ const Dropdown = ({
   className,
   items,
   children,
-  width = 150,
-  height = 200,
+  width,
+  height,
   selecetedItems,
   onSelect,
 }: IDropdown) => {
