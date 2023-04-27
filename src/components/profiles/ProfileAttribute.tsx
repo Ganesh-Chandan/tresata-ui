@@ -33,7 +33,11 @@ const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
       <div className={styles.labelContainer}>
         <div className={styles.label}>{label}</div>
-        <div className={styles.tag}>{tag}</div>
+        <div
+          className={`${styles.tag} ${tag === "No tag" ? styles.noTag : ""}`}
+        >
+          {tag}
+        </div>
       </div>
       <div className={styles.populated}>
         <div className={styles.secondaryLabel}>

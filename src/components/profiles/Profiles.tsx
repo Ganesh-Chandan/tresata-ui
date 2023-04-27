@@ -68,6 +68,7 @@ const profileSources = [
     fields: 43,
     secondaryLabel: "Customers",
     secondaryLabelQty: "+4",
+    isFavorite: false,
   },
   {
     selected: true,
@@ -78,6 +79,7 @@ const profileSources = [
     fields: 43,
     secondaryLabel: "Customers",
     secondaryLabelQty: "+4",
+    isFavorite: true,
   },
 ];
 

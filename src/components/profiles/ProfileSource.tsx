@@ -11,6 +11,7 @@ interface ProfileSourceProp {
   fields: number;
   secondaryLabel: string;
   secondaryLabelQty: string;
+  isFavorite: boolean;
 }
 
 const ProfileSource: React.FC<ProfileSourceProp> = ({
@@ -22,6 +23,7 @@ const ProfileSource: React.FC<ProfileSourceProp> = ({
   fields,
   secondaryLabel,
   secondaryLabelQty,
+  isFavorite,
 }) => {
   const [selectedCheckbox, setSelectedCheckbox] = useState(selected);
   useEffect(() => {
@@ -36,7 +38,11 @@ const ProfileSource: React.FC<ProfileSourceProp> = ({
       />
       <div className={`${styles.star} ${starred ? styles.selected : ""}`} />
       <div className={styles.detail}>
-        <div className={styles.header}>{label}</div>
+        <div
+          className={`${styles.header} ${isFavorite ? styles.boldHeader : ""}`}
+        >
+          {label}
+        </div>
         <div className={styles.match}>
           {`${record} Records, ${fields} Fields`}
         </div>
