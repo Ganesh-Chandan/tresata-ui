@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "./slider.module.scss";
+import styles from "./Slider.module.scss";
 
 interface ISlider {
   value: number;
@@ -26,13 +26,15 @@ const Slider = ({ value, onChange = () => {}, className = "" }: ISlider) => {
     if (!isSliding) {
       return;
     }
+
     if (!sliderRef.current) {
       return;
     }
+
     const { width, left } = sliderRef.current.getBoundingClientRect();
     const { clientX } = event;
     let value = 0;
-    if (clientX - left < 0) {
+    if (clientX - left <= 0) {
       value = 0;
     } else if (clientX > left + width) {
       value = 100;
@@ -43,6 +45,9 @@ const Slider = ({ value, onChange = () => {}, className = "" }: ISlider) => {
   };
 
   const handleMouseUp = (event: any) => {
+    if (!isSliding) {
+      return;
+    }
     setSilding(false);
     onChange(localValue);
   };
@@ -53,20 +58,26 @@ const Slider = ({ value, onChange = () => {}, className = "" }: ISlider) => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       ref={sliderRef}
+      data-testid="sliderContainer"
     >
       <div className={styles.sliderBar}>
         <div className={styles.sliderline}>
-          <div className={styles.slider} style={{ width: `${localValue}%` }} />
+          <div
+            className={styles.slider}
+            style={{ width: `${localValue}%` }}
+            data-testid="sliderbar"
+          />
           <div
             className={styles.sliderIcon}
             style={{ right: `calc(100% - ${localValue}%  - 23px)` }}
             onMouseDown={handleMouseDown}
+            data-testid="sliderIcon"
           >
             {localValue}
           </div>
         </div>
       </div>
-      <div className={styles.sliderRange}>
+      <div className={styles.sliderRange} data-testid="rangeInfo">
         <span>0</span>
         <span>100</span>
       </div>
