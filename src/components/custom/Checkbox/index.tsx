@@ -23,6 +23,7 @@ const Checkbox = ({
         className={styles.checkboxInput}
         checked={isChecked}
         onChange={onChangeHandler}
+        data-testid={label}
       />
       <label className={styles.checkboxLabel}>{label}</label>
     </div>

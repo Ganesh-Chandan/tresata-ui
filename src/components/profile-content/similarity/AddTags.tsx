@@ -28,7 +28,9 @@ const AddTags = ({ selectedTagsCount }: IAddTags) => {
 
   return (
     <div className={styles.addTags}>
-      <div className={styles.selecetedTags}>{selectedTagsCount} Selected</div>
+      <div className={styles.selecetedTags} data-testid="selectedTags">
+        {selectedTagsCount} Selected
+      </div>
       <Dropdown
         className={styles.selecetedTagButton}
         items={items}
