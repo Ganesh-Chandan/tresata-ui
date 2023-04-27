@@ -15,6 +15,7 @@ const profileAttributes = [
     populated: "60%",
     populatedIndicator: "positive",
     unique: "120K",
+    isImageRequired: false,
   },
   {
     id: "customerName",
@@ -25,6 +26,7 @@ const profileAttributes = [
     populated: "100%",
     populatedIndicator: "positive",
     unique: "120K",
+    isImageRequired: false,
   },
   {
     id: "phone",
@@ -35,6 +37,7 @@ const profileAttributes = [
     populated: "60%",
     populatedIndicator: "positive",
     unique: "120K",
+    isImageRequired: true,
   },
   {
     id: "email",
@@ -45,6 +48,7 @@ const profileAttributes = [
     populated: "34%",
     populatedIndicator: "negative",
     unique: "100",
+    isImageRequired: false,
   },
   {
     id: "dob",
@@ -55,6 +59,7 @@ const profileAttributes = [
     populated: "34%",
     populatedIndicator: "negative",
     unique: "100",
+    isImageRequired: false,
   },
 ];
 

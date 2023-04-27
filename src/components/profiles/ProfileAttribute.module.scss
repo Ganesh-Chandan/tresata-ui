@@ -42,10 +42,39 @@
       width: min-content;
       white-space: nowrap;
       margin-top: 8px;
+      display: flex;
+      align-items: center;
+      grid-gap: 5px;
+      .tagImage {
+          position: relative;
+          width: 12px;
+          height: 13px;
+      
+          .background {
+            width: 12px;
+            height: 13px;
+            background: transparent url('../../image/phone.svg') 0% 0% no-repeat padding-box;
+            opacity: 1;
+          }
+      
+          .imageT {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 5px;
+            height: 10px;
+            background: transparent url('../../image/T.svg') 0% 0% no-repeat padding-box;
+            opacity: 1;
+          }
+        }
     }
     .noTag{
       background-color: #fff;
     }
+    
   }
   .unique,
   .populated {

@@ -11,6 +11,7 @@ interface ProfileAttributeProp {
   showSecondaryLabel?: boolean;
   populatedIndicator: string;
   selectAttribute: (id: string) => void;
+  isImageRequired: boolean;
 }
 
 const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
@@ -24,6 +25,7 @@ const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
   showSecondaryLabel = false,
   populatedIndicator,
   selectAttribute,
+  isImageRequired,
 }) => {
   return (
     <div
@@ -36,6 +38,12 @@ const ProfileAttribute: React.FC<ProfileAttributeProp> = ({
         <div
           className={`${styles.tag} ${tag === "No tag" ? styles.noTag : ""}`}
         >
+          {isImageRequired && (
+            <div className={styles.tagImage}>
+              <div className={styles.background} />
+              <div className={styles.imageT} />
+            </div>
+          )}
           {tag}
         </div>
       </div>
