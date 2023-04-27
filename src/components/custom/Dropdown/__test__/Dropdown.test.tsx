@@ -1,12 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Dropdwon from "..";
+import Dropdown from "..";
 
 const onSelect = jest.fn();
 
 describe("Dropdown", () => {
   test("should render dropdown content", () => {
     render(
-      <Dropdwon
+      <Dropdown
         items={[
           { name: "option1", value: "options1" },
           { name: "option2", value: "options2" },
@@ -18,7 +18,7 @@ describe("Dropdown", () => {
         onSelect={onSelect}
       >
         <div>Dropdown</div>
-      </Dropdwon>
+      </Dropdown>
     );
     expect(screen.getByText("Dropdown")).toBeInTheDocument();
     fireEvent.click(screen.getByText("Dropdown"), {});
@@ -27,7 +27,7 @@ describe("Dropdown", () => {
 
   test("should call onSelecet method", () => {
     render(
-      <Dropdwon
+      <Dropdown
         items={[
           { name: "option1", value: "options1" },
           { name: "option2", value: "options2" },
@@ -39,7 +39,7 @@ describe("Dropdown", () => {
         onSelect={onSelect}
       >
         <div>Dropdown</div>
-      </Dropdwon>
+      </Dropdown>
     );
     expect(screen.getByText("Dropdown")).toBeInTheDocument();
     fireEvent.click(screen.getByText("Dropdown"), {});
@@ -49,7 +49,7 @@ describe("Dropdown", () => {
 
   test("should call close method", () => {
     render(
-      <Dropdwon
+      <Dropdown
         items={[
           { name: "option1", value: "options1" },
           { name: "option2", value: "options2" },
@@ -61,7 +61,7 @@ describe("Dropdown", () => {
         onSelect={onSelect}
       >
         <div>Dropdown</div>
-      </Dropdwon>
+      </Dropdown>
     );
 
     expect(screen.getByText("Dropdown")).toBeInTheDocument();
