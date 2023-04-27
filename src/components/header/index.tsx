@@ -1,8 +1,15 @@
 import Toggle from "../custom/Toggle/Toggle";
 import SubHeader from "./SubHeader";
 import Icon from "../custom/Icons";
+import { useState } from "react";
 
 const Header = () => {
+  const [assistiveMode, setAssistiveMode] = useState(true);
+
+  const handleOnChange = (isChecked: boolean) => {
+    setAssistiveMode(isChecked);
+  };
+
   return (
     <header>
       <div className="app-header">
@@ -24,7 +31,7 @@ const Header = () => {
         <div className="actionAndUser">
           <div className="assistiveMode">
             <label>Assistive mode</label>
-            <Toggle />
+            <Toggle onChange={handleOnChange} isChecked={assistiveMode} />
           </div>
           <div className="communityInfo">
             <label>Tresata Community</label>
