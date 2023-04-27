@@ -14,6 +14,7 @@ const App = () => {
           <ProfileContent />
         </div>
       </div>
+      <div className="footer-hide"></div>
       <Footer />
     </div>
   );
