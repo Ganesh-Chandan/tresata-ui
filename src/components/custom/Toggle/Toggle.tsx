@@ -15,11 +15,14 @@ const Toggle = ({
 }: IToggle) => {
   return (
     <label className={styles.switch} style={{ width, height }}>
-      <input type="checkbox" checked={isChecked} />
+      <input
+        type="checkbox"
+        checked={isChecked}
+        onChange={() => onChange(!isChecked)}
+      />
       <span
         className={`${styles.slider} ${styles.round}`}
         style={{ borderRadius: height / 2 }}
-        onClick={() => onChange(!isChecked)}
       ></span>
     </label>
   );
